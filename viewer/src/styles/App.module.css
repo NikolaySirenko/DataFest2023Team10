@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.title {
+    z-index: 999999999;
+    font-size: 32px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    display: block;
+    padding: 0;
+    margin: 0;
+    top: 16px;
+    right: 16px;
+    color: white;
+    position: fixed;
+    font-weight: bolder;
+}
