@@ -5,14 +5,20 @@
 
 .title {
     z-index: 999999999;
-    font-size: 32px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    display: block;
-    padding: 0;
+    font-size: 16px;
+    gap: 8px;
+    display: flex;
+    flex-direction: row;
+    padding: 8px 16px;
     margin: 0;
-    top: 16px;
-    right: 16px;
-    color: white;
+    top: 8px;
+    left: 8px;
+    color: #ededed;
     position: fixed;
     font-weight: bolder;
+    backdrop-filter: blur(24px);
+    background-color: rgba(0, 0, 0, 0.6);
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    outline: 3px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
 }

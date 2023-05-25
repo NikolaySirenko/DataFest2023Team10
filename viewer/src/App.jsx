@@ -1,13 +1,14 @@
 import styles from './styles/App.module.css'
-
-import { useState } from 'react'
 import { Map } from './Map'
-
 
 function App() {
 	return (
 		<>
-			<p className={styles.title}>DataFest 2023</p>
+			<div className={styles.title}>
+				<span>DataFest 2023</span>
+				<span>/</span>
+				<span>Team 10</span>
+			</div>
 
 			<div className={styles.container}>
 				<Map />
