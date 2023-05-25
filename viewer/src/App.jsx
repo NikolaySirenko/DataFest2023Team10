@@ -1,7 +1,8 @@
 import styles from './styles/App.module.css'
 import { Map } from './Map'
+import { Modal } from './Modal'
 
-function App() {
+export default function App() {
 	return (
 		<>
 			<div className={styles.title}>
@@ -11,10 +12,9 @@ function App() {
 			</div>
 
 			<div className={styles.container}>
+				<Modal />
 				<Map />
 			</div>
 		</>
 	)
 }
-
-export default App
