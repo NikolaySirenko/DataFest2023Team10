@@ -2,12 +2,15 @@ import 'leaflet/dist/leaflet.css'
 
 import { MapController } from './MapControler';
 import provinces from './data/provinces.geojson?raw';
-import { MapContainer, TileLayer, Marker, Circle, GeoJSON, ZoomControl } from 'react-leaflet';
+import features from './data/features_by_cords.json?raw';
+
+import { MapContainer, TileLayer, Marker, Circle, GeoJSON, ZoomControl, Tooltip } from 'react-leaflet';
 import { useAtom } from 'jotai';
 import { modalOpened } from './state/modal';
 
 // Parse data
 const provincesData = JSON.parse(provinces);
+const featuresData = JSON.parse(features);
 
 // Provinces styling
 const provincesStyle = {
@@ -31,6 +34,34 @@ export function Map() {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
 
+            {
+                Object.keys(featuresData).map((key) => {
+                    const cords = key.split(':').map((value) => parseFloat(value));
+
+                    return (
+                        <Circle
+                            key={key}
+                            center={cords}
+                            radius={512}
+                            eventHandlers={{
+                                click: (e) => {
+                                    setModal(true);
+                                    console.log('marker clicked', e)
+                                },
+                            }}>
+                            <Tooltip
+                                permanent={true}
+                                direction="center"
+                            >
+                                {featuresData[key].length}
+                            </Tooltip>
+                        </Circle>
+
+                    )
+
+
+                })
+            }
             {/* <Marker
                 position={position}
                 title='sdfsdf'
