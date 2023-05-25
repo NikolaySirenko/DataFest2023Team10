@@ -6,8 +6,9 @@ export default function App() {
 	return (
 		<>
 			<div className={styles.title}>
-				<span>DataFest 2023</span>
+				<b>RWS Explorer</b>
 				<span>/</span>
+				<span>DataFest 2023</span>
 				<span>Team 10</span>
 			</div>
 

@@ -1,0 +1,15 @@
+.topics {
+    gap: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.topic {
+    width: 100%;
+    border-radius: 3px;
+    padding: 6px 8px;
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+    background-color: rgb(18, 18, 18);
+}

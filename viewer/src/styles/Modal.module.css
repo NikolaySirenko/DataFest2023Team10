@@ -12,15 +12,17 @@
     z-index: 999999999999;
     box-sizing: border-box;
     position: fixed;
+    overflow: hidden;
+    overflow-y: scroll;
     top: 0;
     right: 0;
-    width: 400px;
+    padding: 16px;
+    width: 512px;
     height: calc(100vh - 16px);
     margin: 8px;
-    padding: 16px;
     border-radius: 4px;
     outline: 3px solid rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(24px);
-    background-color: rgba(0, 0, 0, 0.6);
     transition: 0.3s ease right;
+    background-color: rgba(0, 0, 0, 0.6);
 }
